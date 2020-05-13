@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Transactions;
 
 namespace ComputationalThinkingExercises
 {
@@ -83,7 +84,19 @@ namespace ComputationalThinkingExercises
             Console.WriteLine("ARE THESE INTEGERS EQUAL?\n");
 
             // Enter your solution here
-
+            Console.WriteLine("Enter a First Integer");
+            string firstInteger = Console.ReadLine();
+            Console.WriteLine("Enter a Second Integer");
+            string secondInteger = Console.ReadLine();
+            bool isEqual = firstInteger == secondInteger;
+            if(isEqual)
+            {
+                Console.WriteLine("They are equal");
+            }
+            else
+            {
+                Console.WriteLine("They are not equal");
+            }
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
         }
@@ -97,6 +110,18 @@ namespace ComputationalThinkingExercises
             Console.WriteLine("EVEN OR ODD?\n");
 
             // Enter your solution here
+            Console.WriteLine("Enter an Integer");
+            int firstInteger = Convert.ToInt32(Console.ReadLine());
+
+            bool isEven = (firstInteger % 2) == 0;
+            if(isEven)
+            {
+                Console.WriteLine("The Integer is Even");
+            }
+            else
+            {
+                Console.WriteLine("The Integer is Odd");
+            }
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
